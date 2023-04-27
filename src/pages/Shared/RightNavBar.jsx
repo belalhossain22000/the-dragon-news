@@ -9,7 +9,7 @@ const RightNavBar = () => {
       <h3>Login with</h3>
 
       <Button variant="outline-primary">
-        {" "}
+       
         <FaGoogle /> Login with Google
       </Button>
       <br />

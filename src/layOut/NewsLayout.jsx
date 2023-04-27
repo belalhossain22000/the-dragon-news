@@ -9,20 +9,18 @@ import Home from "../pages/Home/Home";
 import RightNavBar from "../pages/Shared/RightNavBar";
 import { Outlet } from "react-router-dom";
 
-const Main = () => {
+const NewsLayout = () => {
   return (
-    <div>
+    <div className="my-5">
       <Header></Header>
 
       <Container>
         <Row>
-          <Col>
-            <LeftNavBar></LeftNavBar>
-          </Col>
-          <Col xs={6}>
+          
+          <Col xs={9}>
             <Outlet></Outlet>
           </Col>
-          <Col>
+          <Col xs={3}>
             <RightNavBar></RightNavBar>
           </Col>
         </Row>
@@ -33,4 +31,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default NewsLayout;

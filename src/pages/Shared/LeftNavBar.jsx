@@ -12,7 +12,14 @@ const LeftNavBar = () => {
   return (
     <div>
       {cetegorys.map((cetegory) => (
-        <p key={cetegory.id}><Link className="text-decoration-none">{cetegory.name}</Link></p>
+        <p key={cetegory.id}>
+          <Link
+            to={`/cetegory/${cetegory.id}`}
+            className="text-decoration-none"
+          >
+            {cetegory.name}
+          </Link>
+        </p>
       ))}
     </div>
   );
