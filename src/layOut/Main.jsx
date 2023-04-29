@@ -8,11 +8,13 @@ import LeftNavBar from "../pages/Shared/LeftNavBar";
 import Home from "../pages/Home/Home";
 import RightNavBar from "../pages/Shared/RightNavBar";
 import { Outlet } from "react-router-dom";
+import NavigationBar from "../pages/Shared/NavigationBar";
 
 const Main = () => {
   return (
     <div>
       <Header></Header>
+      <NavigationBar></NavigationBar>
 
       <Container>
         <Row>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import EditorsInshot from "../Home/NewsCard/EditorsInshot";
 
 const LeftNavBar = () => {
   const [cetegorys, setCategorys] = useState([]);
@@ -21,6 +22,7 @@ const LeftNavBar = () => {
           </Link>
         </p>
       ))}
+      <EditorsInshot></EditorsInshot>
     </div>
   );
 };
