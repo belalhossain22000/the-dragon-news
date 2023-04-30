@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path: ":id",
         element: <Cetegory></Cetegory>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/cetegorys/${params.id}`),
+          fetch(`https://the-dragon-news-server-fuz036mgu-belalhossain22000.vercel.app/cetegorys/${params.id}`),
       },
     ],
   },
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
         path: ":id",
         element: <PrivetRout><News></News></PrivetRout>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/news/${params.id}`),
+          fetch(`https://the-dragon-news-server-fuz036mgu-belalhossain22000.vercel.app/news/${params.id}`),
       },
     ],
   },

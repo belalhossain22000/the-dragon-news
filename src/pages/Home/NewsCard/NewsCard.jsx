@@ -10,7 +10,9 @@ import {
   FaShareAlt,
   FaStar,
 } from "react-icons/fa";
-import Rating from "react-rating";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
@@ -38,19 +40,13 @@ const NewsCard = ({ news }) => {
           <Link to={`/news/${_id}`}>Read More</Link>
         </Card.Text>
       </Card.Body>
-      <Card.Footer className="text-muted">
-        <div>
-          <Rating
-            placeholderRating={rating.number}
-            readonly
-            emptySymbol={<FaRegStar></FaRegStar>}
-            placeholderSymbol={<FaStar className="text-warning"></FaStar>}
-            fullSymbol={<FaStar></FaStar>}
-          />
-          <span> {rating.number}</span>
+      <Card.Footer className="text-muted d-flex">
+        <div className="flex-grow-1 d-flex align-items-center">
+          <Rating style={{ maxWidth: 150 }} value={Math.round(rating.number||0)} readOnly />
+          <span className="ms-2"> {rating.number}</span>
         </div>
         <div>
-          <FaEye></FaEye>
+          <FaEye className="me-2"></FaEye>
           {total_view}
         </div>
       </Card.Footer>

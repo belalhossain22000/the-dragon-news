@@ -5,7 +5,7 @@ import EditorsInshot from "../Home/NewsCard/EditorsInshot";
 const LeftNavBar = () => {
   const [cetegorys, setCategorys] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/cetegorys")
+    fetch("https://the-dragon-news-server-fuz036mgu-belalhossain22000.vercel.app/cetegorys")
       .then((res) => res.json())
       .then((data) => setCategorys(data))
       .catch((err) => console.error(err));
